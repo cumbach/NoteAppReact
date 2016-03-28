@@ -20,7 +20,7 @@ function action(type, payload = {}) {
   return {type, ...payload}
 }
 
-export const addNote = note => action(ADD_NOTE, {note})
+export const addNote = note => action(ADD_NOTE)
 export const editNote = (id, task) => action(EDIT_NOTE, {id, task})
 export const deleteNote = id => action(DELETE_NOTE, {id})
 
