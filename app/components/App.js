@@ -1,9 +1,9 @@
 import React from 'react';
-import Notes from './Notes';
+import Lanes from './Lanes';
 
 const App = () => (
   <div>
-    <Notes />
+    <Lanes />
   </div>
 )
 

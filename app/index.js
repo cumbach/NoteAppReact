@@ -8,13 +8,10 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
-import { notes } from './dux'
+import rootReducer from './dux'
 
-const rootReducer = combineReducers({notes})
 const initialState = storage.get('noteApp') || {}
-
 const store = createStore(rootReducer, initialState)
-
 store.subscribe(
   () => storage.set('noteApp', store.getState())
 )
